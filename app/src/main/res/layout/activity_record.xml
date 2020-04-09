@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/record_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/webfont"
+            android:paddingEnd="10dp"
+            android:paddingStart="0dp"
+            android:text="@string/title_record_1"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="65sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/webfont"
+            android:text="@string/title_record_2"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="60sp" />
+
+        <com.adam.gpsstatus.GpsStatusImageView
+            android:id="@+id/gpsImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="7dp"
+            app:drawable0="@drawable/ic_gps_0_24dp"
+            app:drawable1="@drawable/ic_gps_1_24dp"
+            app:drawable2="@drawable/ic_gps_2_24dp"
+            app:drawable3="@drawable/ic_gps_3_24dp"
+            app:thr_1_2="4"
+            app:thr_2_3="8" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/record_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/record_title"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/thaisansneue_light"
+        android:text="@string/welcome"
+        android:textColor="@color/colorGray"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:baselineAligned="false"
+        android:id="@+id/record_location"
+        android:layout_below="@+id/record_welcome"
+        android:orientation="horizontal"
+        android:layout_marginBottom="30dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="Latitude : "
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/record_latitude"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/zero"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="Longtitude : "
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/record_longtitude"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/zero"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="Altitude : "
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/record_altitude"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/zero"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="approX : "
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/record_approX"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/zero"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="approY : "
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/record_approY"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/zero"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="approZ : "
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/record_approZ"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/zero"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/record_btnStartStop"
+        android:layout_width="284dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/record_location"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_btn_lightgreen"
+        android:fontFamily="@font/kaishitingzhifront"
+        android:gravity="center"
+        android:text="@string/start"
+        android:textColor="@color/colorWhite"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:id="@+id/record_groupTimeScroll"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/record_btnStartStop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+        <Chronometer
+            android:id="@+id/record_timer"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/thaisansneue_semibold"
+            android:layout_gravity="center"
+            android:format="%s"
+            android:text="@string/zero_time"
+            android:textColor="@color/colorGray"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/record_btnScrollDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginTop="1.5dp"
+            android:fontFamily="@font/thaisansneue_light"
+            android:text="@string/un_auto_scrollbar"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/colorGray"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <!--先不要管下面这个-->
+    <ScrollView
+        android:id="@+id/record_logScroll"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/record_groupTimeScroll"
+        android:alpha="0"
+        android:background="@drawable/bg_log"
+        android:fadingEdgeLength="20dp"
+        android:overScrollMode="never"
+        android:paddingEnd="18dp"
+        android:paddingStart="18dp"
+        android:paddingTop="10dp"
+        android:requiresFadingEdge="vertical"
+        android:visibility="invisible">
+            <TextView
+                android:id="@+id/record_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/thaisansneue_light"
+                android:text="@string/searching"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"/>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/record_groupMenu"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/record_groupTimeScroll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="GPS L1 : "
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/record_totalGpsL1"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="QZSS L1 : "
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/record_totalQzssL1"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="GALILEO E1 : "
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/record_totalGalileoE1"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="GLONASS : "
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/record_totalGlonass"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/gps_time"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="vertical"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="GPS L5 : "
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/record_totalGpsL5"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="QZSS L5 : "
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/record_totalQzssL5"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="GALILEO E5a : "
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/record_totalGalileoE5a"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="BEIDOU : "
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/record_totalBeidou"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/thaisansneue_light"
+                        android:text="@string/zero"
+                        android:textColor="@color/colorGray"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/record_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/zero_time"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/record_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/thaisansneue_light"
+                    android:text="@string/zero_date"
+                    android:textColor="@color/colorGray"
+                    android:textSize="22sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_marginStart="5dp"
+            >
+            <Button
+                android:id="@+id/record_btnUpload"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_shape"
+                android:fontFamily="@font/thaisansneue_light"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/uploadposition"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/record_btnFile"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
+                android:fontFamily="@font/thaisansneue_light"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/file"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/record_btnSetting"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
+                android:fontFamily="@font/thaisansneue_light"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/setting"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

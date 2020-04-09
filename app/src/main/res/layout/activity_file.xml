@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/file_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/settingtitle"
+            android:paddingEnd="10dp"
+            android:paddingStart="0dp"
+            android:text="@string/rinex"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="60sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/settingfiletitle"
+            android:text="@string/file"
+            android:textColor="@color/colorDarkGray"
+            android:textSize="60sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/file_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="30sp"
+        android:fontFamily="@font/thaisansneue_light"
+        android:textColor="@color/colorGray"
+        android:text="@string/empty_file"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/file_title"
+        android:fadingEdgeLength="20dp"
+        android:overScrollMode="never"
+        android:requiresFadingEdge="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/file_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:reverseLayout="true"
+            app:stackFromEnd="true" />
+    </ScrollView>
+
+</RelativeLayout>
